@@ -1,75 +1,149 @@
-# Busca CNPJ
+# CNPJ Lookup
 
-Aplicação simples em Python + Streamlit que consulta dados de empresas pelo CNPJ usando a BrasilAPI.
+A simple Python + Streamlit application that retrieves company data by CNPJ using BrasilAPI.
 
-## Sobre
+## About
 
-Este projeto fornece uma interface web minimalista para buscar informações de um CNPJ (Cadastro Nacional da Pessoa Jurídica) consultando a API pública da BrasilAPI. A interface permite inserir um CNPJ (com ou sem formatação) e exibe os dados retornados, como razão social, nome fantasia, endereço, sócios e atividades.
+This project provides a minimal web interface to search for CNPJ (Brazilian company tax ID) information by querying the public BrasilAPI. The interface accepts a CNPJ (formatted or plain numbers) and displays returned data such as corporate name, trade name, address, partners, and activities.
 
-## Funcionalidades
+## Features
 
-- Inserir CNPJ (aceita CNPJ com pontos, barras e traço ou apenas números).
-- Formatação automática de CNPJ e CEP na exibição.
-- Exibição de: razão social, nome fantasia, capital social, data de abertura, telefones, endereço, CEP, e-mail, situação cadastral, regime tributário, sócios e atividades.
-- Usa a BrasilAPI (sem necessidade de chave/API key).
+- Enter a CNPJ (accepts formatted CNPJ with dots, slash and dash or only digits).
+- Automatic formatting of CNPJ and CEP for display.
+- Displays: corporate name, trade name, share capital, opening date, phone numbers, address, CEP, email, registration status, tax regime, partners, and activities.
+- Uses BrasilAPI (no API key required).
 
-## Requisitos
+## Requirements
 
-- Python 3.8 ou superior
-- Conexão com a internet (consulta a BrasilAPI)
+- Python 3.8 or newer
+- Internet connection (queries BrasilAPI)
 
-Dependências principais:
+Main dependencies:
 
 - streamlit
 - requests
 
-## Instalação (Windows - cmd.exe)
+## Installation (Windows - cmd.exe)
 
-1. Crie e ative um ambiente virtual (recomendado):
+1. Create and activate a virtual environment (recommended):
 
 ```cmd
 python -m venv venv
 venv\Scripts\activate
 ```
 
-2. Atualize pip e instale dependências:
+2. Upgrade pip and install dependencies:
 
 ```cmd
 pip install --upgrade pip
 pip install streamlit requests
 ```
 
-Se preferir, você pode criar um `requirements.txt` contendo `streamlit` e `requests` e instalar com `pip install -r requirements.txt`.
+You can also create a `requirements.txt` containing `streamlit` and `requests` and install with `pip install -r requirements.txt`.
 
-## Como rodar
+## How to run
 
-Execute o Streamlit apontando para o arquivo principal (`main.py`):
+Run Streamlit pointing to the main file (`main.py`):
 
 ```cmd
 streamlit run main.py
 ```
 
-Isso abrirá a interface web no navegador (normalmente em http://localhost:8501). Na página, digite o CNPJ no campo e clique em "Buscar".
+This will open the web interface in your browser (usually at http://localhost:8501). On the page, enter the CNPJ in the field and click "Search".
 
-## Uso
+## Usage
 
-- Informe o CNPJ completo (ex.: `12.345.678/0001-90` ou `12345678000190`).
-- Se o CNPJ estiver correto e presente na base da BrasilAPI, os dados serão exibidos na página.
-- Mensagens de erro aparecerão se o CNPJ for inválido (não tiver 14 dígitos) ou se houver problema na conexão com a API.
+- Enter the full CNPJ (e.g., `12.345.678/0001-90` or `12345678000190`).
+- If the CNPJ is valid and present in BrasilAPI's database, the data will be displayed.
+- Error messages will appear if the CNPJ is invalid (not 14 digits) or if there is a problem connecting to the API.
 
-## Estrutura do projeto
+## Project structure
 
-- `main.py` — aplicação Streamlit que realiza a busca e renderiza a interface.
-- `pyproject.toml` — metadados do projeto (opcional).
-- `README.md` — este arquivo.
+- `main.py` — Streamlit application that performs the lookup and renders the interface.
+- `pyproject.toml` — project metadata (optional).
+- `README.md` — this file.
 
-## Observações
+## Notes
 
-- A aplicação depende da disponibilidade da BrasilAPI. Em caso de instabilidade ou mudanças na API, algumas informações podem deixar de ser retornadas.
-- Não há tratamento de autenticação porque a BrasilAPI usada aqui não exige chave.
+- The application depends on BrasilAPI availability. If the API is down or changes, some information may stop being returned.
+- No authentication handling is included because the BrasilAPI used here does not require an API key.
 
-## Contribuições
+## Contributions
 
-Contribuições são bem-vindas. Abra uma issue ou um pull request descrevendo a alteração proposta.
+Contributions are welcome. Open an issue or a pull request describing the proposed change.
+// ...existing code...
+```// filepath: c:\Users\hugod\Desktop\ANALYTICS ENGINEER\estudos\projetos\api_cnpj\README.md
+// ...existing code...
+# CNPJ Lookup
 
+A simple Python + Streamlit application that retrieves company data by CNPJ using BrasilAPI.
 
+## About
+
+This project provides a minimal web interface to search for CNPJ (Brazilian company tax ID) information by querying the public BrasilAPI. The interface accepts a CNPJ (formatted or plain numbers) and displays returned data such as corporate name, trade name, address, partners, and activities.
+
+## Features
+
+- Enter a CNPJ (accepts formatted CNPJ with dots, slash and dash or only digits).
+- Automatic formatting of CNPJ and CEP for display.
+- Displays: corporate name, trade name, share capital, opening date, phone numbers, address, CEP, email, registration status, tax regime, partners, and activities.
+- Uses BrasilAPI (no API key required).
+
+## Requirements
+
+- Python 3.8 or newer
+- Internet connection (queries BrasilAPI)
+
+Main dependencies:
+
+- streamlit
+- requests
+
+## Installation (Windows - cmd.exe)
+
+1. Create and activate a virtual environment (recommended):
+
+```cmd
+python -m venv venv
+venv\Scripts\activate
+```
+
+2. Upgrade pip and install dependencies:
+
+```cmd
+pip install --upgrade pip
+pip install streamlit requests
+```
+
+You can also create a `requirements.txt` containing `streamlit` and `requests` and install with `pip install -r requirements.txt`.
+
+## How to run
+
+Run Streamlit pointing to the main file (`main.py`):
+
+```cmd
+streamlit run main.py
+```
+
+This will open the web interface in your browser (usually at http://localhost:8501). On the page, enter the CNPJ in the field and click "Search".
+
+## Usage
+
+- Enter the full CNPJ (e.g., `12.345.678/0001-90` or `12345678000190`).
+- If the CNPJ is valid and present in BrasilAPI's database, the data will be displayed.
+- Error messages will appear if the CNPJ is invalid (not 14 digits) or if there is a problem connecting to the API.
+
+## Project structure
+
+- `main.py` — Streamlit application that performs the lookup and renders the interface.
+- `pyproject.toml` — project metadata (optional).
+- `README.md` — this file.
+
+## Notes
+
+- The application depends on BrasilAPI availability. If the API is down or changes, some information may stop being returned.
+- No authentication handling is included because the BrasilAPI used here does not require an API key.
+
+## Contributions
+
+Contributions are welcome. Open an issue or a pull request describing the proposed change.
